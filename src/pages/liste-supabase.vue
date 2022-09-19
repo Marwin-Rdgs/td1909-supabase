@@ -1,6 +1,6 @@
 <template>
     <div class="p-2">
-        <h1 class="text-2xl">Page Liste Fetch</h1>
+        <h1 class="text-2xl">Page Liste Supabase</h1>
         <div v-for="maisons in maisons" :key="maisons.nom">
             <card class="w-1/2" v-bind="maisons"/>
         </div>
@@ -9,8 +9,9 @@
 
 <script setup lang="ts">
     import card from "../components/card.vue";
+    import { supabase } from "../supabase";
 
-    const res = await fetch("maisons.json");
-    const maisons = await res.json();
+console.log("supabase :", supabase); // pour vérifier et "garder" supabase dans le code
+const maisons = []; // à remplacer par l'appel à Supabase
 
 </script>

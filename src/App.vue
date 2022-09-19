@@ -27,6 +27,11 @@
         </router-link>
       </li>
       <li>
+        <router-link class="text-red-600 underline" to="/liste-supabase">
+          <h2>lien vers Page Liste-supabase</h2>
+        </router-link>
+      </li>
+      <li>
         <router-link class="text-red-600 underline" to="/edit/new">
           <h2>lien vers Page New</h2>
         </router-link>
@@ -38,6 +43,7 @@
   <!-- Affiche les pages -->
  <Suspense> <router-view class="m-2 border-2 p-2" /></Suspense>
 </template>
+
 
 <script setup lang="ts">
 import { Bars3Icon } from '@heroicons/vue/20/solid'
