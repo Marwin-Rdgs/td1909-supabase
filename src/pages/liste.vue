@@ -10,6 +10,6 @@
 <script setup lang="ts">
     import card from "../components/card.vue";
 
-  const maisons = [{nom:"test", price:34, favoris:true, txt:"produit de test", nbbath:2, nbsize:"test m²", img:"/public/card.jpg"}, {nom:"test2", price:27, favoris:false, txt:"2ème produit de test", nbbath:2, nbsize:"test*2 m²", img:"/public/card.jpg"}, {nom:"Dernier test", price:86, txt:"Dernier produit de test", nbbath:1, nbsize:"test m²", img:"/public/card.jpg"}]
+  const maisons = [{nomMaison:"test", prixMaison:34, favoris:true, adressMaison:"produit de test", nbrBath:2, surfaceMaison:"test m²", imgMaison:"/public/card.jpg"}, {nomMaison:"test2", prixMaison:27, favoris:false, adressMaison:"2ème produit de test", nbrBath:2, surfaceMaison:"test*2 m²", imgMaison:"/public/card.jpg"}, {nomMaison:"Dernier test", prixMaison:86, adressMaison:"Dernier produit de test", nbrBath:1, surfaceMaison:"test m²", imgMaison:"/public/card.jpg"}]
 //   import maisons from "../assets/maisons.json";
 </script>

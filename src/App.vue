@@ -36,6 +36,11 @@
           <h2>lien vers Page New</h2>
         </router-link>
       </li>
+      <li>
+        <router-link class="text-red-600 underline" to="/login">
+          <h2>Connecter :D</h2>
+        </router-link>
+      </li>
 
     </ul>
   </nav>

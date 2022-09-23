@@ -2,7 +2,7 @@
     import cardoffre from "../../components/card.vue";
     import offremaison from "../../components/FormulaireOffreMaison.vue"
 
-    const maisonex = {nom:"test", price:34, favoris:false, txt:"produit de test", nbbath:2, nbsize:"test m²", img:"/card.jpg"};
+    const maisonex = {nomMaison:"test", prixMaison:34, favoris:false, adressMaison:"produit de test", nbrBath:2, surfaceMaison:"test m²", imgMaison:"/card.jpg"};
 </script>
 
 <template>
