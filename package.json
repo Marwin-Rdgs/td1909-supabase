@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@formkit/vue": "^1.0.0-beta.10",
+    "@headlessui/vue": "^1.7.3",
     "@heroicons/vue": "^2.0.8",
     "@supabase/supabase-js": "^1.35.7",
+    "lodash": "^4.17.21",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
   },

@@ -6,6 +6,10 @@
     import { useRouter } from "vue-router";
     const router = useRouter();
 
+    // defineProps<{
+    // id?: string;
+    //     }>();
+
   const props = defineProps(["id"]);
 if (props.id) {
     // On charge les données de la maison

@@ -36,9 +36,9 @@ if (props.id) {
     <div>
         <div class="p-2">
                 <h2> Liste des Agents</h2>
-            <ul>
-                <li v-for="Agent in Agent" :key="Agent.prenom_agent">
-                    <p>{{ Agent.prenom_agent }} {{ Agent.nom_agent }} </p>
+            <ul class="flex gap-2">
+                | <li v-for="Agent in (data as any[])" :key="Agent.prenom_agent">
+                    <p>{{ Agent.prenom_agent }} {{ Agent.nom_agent }} | </p>
                 </li>
             </ul>
 

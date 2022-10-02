@@ -38,7 +38,7 @@
   <li class="mb-4">
         <h1>TP 4 - Liste Simple</h1>
     <div class="flex gap-4">
-        <router-link class="text-red-600 underline" to="/quartier/index"><h2>Quartier</h2></router-link>
+        <router-link class="text-red-600 underline" to="/quartier"><h2>Quartier</h2></router-link>
     </div>
   </li>
 
