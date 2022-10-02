@@ -1,6 +1,6 @@
 <script setup>
     import cardoffre from "../../components/card.vue";
-    import offremaison from "../../components/FormulaireOffreMaison.vue"
+    import offremaison from "../../components/Forms/FormulaireOffreMaison.vue"
 
     const maisonex = {nomMaison:"test", prixMaison:34, favoris:false, adressMaison:"produit de test", nbrBath:2, surfaceMaison:"test m²", imgMaison:"/card.jpg"};
 </script>

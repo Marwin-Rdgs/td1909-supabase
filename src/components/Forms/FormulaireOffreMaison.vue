@@ -1,11 +1,21 @@
 <script setup lang="ts">
     import { ref } from "@vue/reactivity";
-    import { supabase } from "../supabase.ts";
-    import cardoffre from "./card.vue";
+    import { supabase } from "../../supabase.ts";
+    import cardoffre from "../card.vue";
 
+    import { useRouter } from "vue-router";
+    const router = useRouter();
+
+  const props = defineProps(["id"]);
+if (props.id) {
+    // On charge les données de la maison
     let { data: Maisons, error } = await supabase
-  .from('Maisons')
-  .select('*')
+        .from("Maisons")
+        .select("*")
+        .eq("id_maison", props.id);
+    if (error) console.log("n'a pas pu charger le table Maison :", error);
+    else Maisons.value = (data as any[])[0];
+}
 
     // On fait une variable réactive qui réactive qui réference les données
     // ATTENTION : faire une Ref pas une Reactive car :
@@ -14,7 +24,11 @@
 
     async function upsertMaison(dataForm, node) {
     const { data, error } = await supabase.from("Maisons").upsert(dataForm);
-    if (error) node.setErrors([error.message])
+    if (error || !data) node.setErrors([error?.message])
+    else {
+    node.setErrors([]);
+    router.push({ name: "edit-id", params: { id_maison: data[0].id} });
+    }
 }
 
 </script>
@@ -24,7 +38,7 @@
         <div class="p-2">
             <h2 class="text-2xl">Résultat (Prévisualisation)</h2>
             <!-- Optionnel on affiche les données -->
-            <cardoffre v-bind="maison" />
+            <cardoffre v-bind="Maisons" />
 
         </div>
         <div class="p-2">
